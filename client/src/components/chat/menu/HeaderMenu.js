@@ -9,7 +9,7 @@ padding: 10px 60px 5px 24px;
 color:#4a4a4a
 `
 
-function HeaderMenu(){
+function HeaderMenu({setOpenDrawer}){
     const [open, setOpen] = useState(null)
     const handleClose = () => {
         setOpen(null)
@@ -17,6 +17,8 @@ function HeaderMenu(){
     const handleClick = (e) => {
         setOpen(e.currentTarget)
     }
+    
+    
     return(
         <>
             <MoreVert onClick={handleClick}/>
@@ -35,6 +37,10 @@ function HeaderMenu(){
             horizontal:'right'
         }}
       >
+        <MenuOption onClick={()=>{
+            setOpenDrawer(true)
+            handleClose()
+        }}>Profile</MenuOption>
         <MenuOption onClick={handleClose}>New Group</MenuOption>
         <MenuOption onClick={handleClose}>Archived</MenuOption>
         <MenuOption onClick={handleClose}>Starred Messages</MenuOption>
