@@ -1,6 +1,3 @@
-//abhishekwhatsapp
-//clonepassword
-//mongodb+srv://abhishekwhatsapp:<password>@cluster0.riexokl.mongodb.net/
 
 import express from 'express'
 import Connection from './database/db.js'
