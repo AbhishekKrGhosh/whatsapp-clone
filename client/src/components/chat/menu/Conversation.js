@@ -5,7 +5,7 @@ const Component = styled(Box)`
 display:flex;
 height:45px;
 padding:13px 0;
-cursor:pointer
+cursor:pointer;
 `
 
 const Image = styled('img')({
