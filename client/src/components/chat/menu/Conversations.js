@@ -10,17 +10,17 @@ const Component = styled(Box)`
 `
 
 
-function Conversations(){
+function Conversations({text}){
     const [users, setUsers] = useState([])
     const {account} = useContext(AccountContext)
     useEffect(()=>{
         const fetchData = async () => {
             let response = await getUsers()
-            setUsers(response)
-            console.log(users)
+            const filteredData = response.filter(user=>user.name.toLowerCase().includes(text.toLowerCase()))
+            setUsers(filteredData)
         }
         fetchData()
-    },[])
+    },[text])
     return(
         <Component>
             {

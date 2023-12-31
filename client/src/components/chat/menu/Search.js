@@ -28,14 +28,15 @@ height:15px;
 padding-left:65px;
 font-size:14px;
 `
-function Search(){
+function Search({setText}){
     return(
         <Component>
             <Wrapper>
                 <Icon>
                     <SearchIcon fontSize="small"/>
                 </Icon>
-                <InputField placeholder="Search or Start a new Chat"/>
+                <InputField placeholder="Search or Start a new Chat"
+                onChange={(e)=>setText(e.target.value)}/>
             </Wrapper>
         </Component>
 )

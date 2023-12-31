@@ -30,13 +30,13 @@ margin-left:auto;
 }
 `
 
-function ChatHeader(){
+function ChatHeader({person}){
     return(
         <Header>
-            <Image src={defaultProfilePicture} alt="dp"/>
+            <Image src={person.picture} alt="dp"/>
             <Box>
-                <Typography>Name</Typography>
-                <Status>Online Status</Status>
+                <Typography>{person.name}</Typography>
+                <Status>Offline</Status>
             </Box>
             <RightContainer>
                 <Search/>
