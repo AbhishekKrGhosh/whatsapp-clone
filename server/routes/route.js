@@ -21,9 +21,9 @@ route.get('/file/:filename',getImage)
 
 const __dirname1 = path.resolve()
 if(process.env.NODE_ENV=== 'production'){
-    route.use(express.static(path.join(__dirname1,'..','/client/build')))
+    route.use(express.static(path.join(__dirname1,'/client/build')))
     route.get('*', (req,res) => {
-        res.sendFile(path.resolve(__dirname1,'..', 'client', 'build', 'index.html'))
+        res.sendFile(path.resolve(__dirname1, 'client', 'build', 'index.html'))
     })
 }
 else{
