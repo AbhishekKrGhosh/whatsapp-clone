@@ -5,7 +5,7 @@ dotenv.config()
 const username1 = process.env.USERNAME1
 const password1 = process.env.PASSWORD1
 
-const URL = `mongodb+srv://abhiwhatsapp:Gmi8opePXUVbLxVV@cluster0.nveak6d.mongodb.net/`
+const URL = `mongodb+srv://${username1}:${password1}@cluster0.nveak6d.mongodb.net/`
 const Connection = async () => {
 
     
